@@ -2,16 +2,6 @@
 # 提示信息
 echo "此脚本为UABBC节点自动安装脚本，适用系统Centos，安装后将覆盖节点数据，现在开始20秒钟等待确认时间，如果选择不安装请运行Ctrl+C键退出"
 echo ""
-
-# 20秒等待用户确认，如果用户在此期间输入Ctrl+C，则退出脚本
-for (( i=20; i>0; i-- )); do
-    echo -ne "等待用户确认时间：$i\033[0K\r"
-    read -t 1 -n 3 key
-    if [[ $key = $'\033w' ]]; then
-        echo -e "\n已选择退出脚本！"
-        exit
-    fi
-done
 # Check if yum is installed, if not install a package manager and then install yum
 if ! command -v yum &> /dev/null; then
   if command -v apt-get &> /dev/null; then
