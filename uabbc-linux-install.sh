@@ -1,21 +1,4 @@
 #!/bin/bash
-# 提示信息
-echo "此脚本为UABBC节点自动安装脚本，适用系统Centos，安装后将覆盖节点数据，现在开始20秒钟等待确认时间，如果选择不安装请运行Ctrl+C键退出"
-echo ""
-# Check if yum is installed, if not install a package manager and then install yum
-if ! command -v yum &> /dev/null; then
-  if command -v apt-get &> /dev/null; then
-    sudo apt-get update
-    sudo apt-get install -y yum
-  elif command -v dnf &> /dev/null; then
-    sudo dnf install -y yum
-  elif command -v zypper &> /dev/null; then
-    sudo zypper install -y yum
-  else
-    echo "Error: could not find a package manager to install yum"
-    exit 1
-  fi
-fi
 
 # Install wget
 sudo yum -y install wget
