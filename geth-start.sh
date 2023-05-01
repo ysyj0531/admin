@@ -39,7 +39,7 @@ do
       then
         command="geth --datadir ./geth-home/data --networkid 30888 --syncmode=full --http --http.vhosts='*' --http.addr '0.0.0.0' --http.port 30888 --http.api 'admin,debug,eth,web3,personal,ethash,miner' --http.corsdomain '*' --ws --ws.addr '0.0.0.0' --ws.port 30999 --ws.api 'admin,debug,eth,web3,personal,ethash,miner' --ws.origins '*' --allow-insecure-unlock console 2> /dev/null"
       else
-        command="geth --dev --datadir ./geth-home/data --networkid 30888 --syncmode=full --http --http.vhosts='*'--http.addr '0.0.0.0' --http.port 30888 --http.api 'admin,debug,eth,web3,personal,ethash,miner' --http.corsdomain '*' --ws --ws.addr '0.0.0.0' --ws.port 30999 --ws.api 'admin,debug,eth,web3,personal,ethash,miner' --ws.origins '*' --allow-insecure-unlock console 2> /dev/null"
+        command="geth --dev --datadir ./geth-home/data --networkid 30888 --http --http.vhosts='*'--http.addr '0.0.0.0' --http.port 30888 --http.api 'admin,debug,eth,web3,personal,ethash,miner' --http.corsdomain '*' --ws --ws.addr '0.0.0.0' --ws.port 30999 --ws.api 'admin,debug,eth,web3,personal,ethash,miner' --ws.origins '*' --allow-insecure-unlock console 2> /dev/null"
       fi
       ;;
     3)
@@ -48,7 +48,7 @@ do
       then
         command="geth --datadir ./geth-home/data --networkid 30888 --syncmode=light --http --http.vhosts='*' --http.addr '0.0.0.0' --http.port 30888 --http.api 'admin,debug,eth,web3,personal,ethash,miner' --http.corsdomain '*' --ws --ws.addr '0.0.0.0' --ws.port 30999 --ws.api 'admin,debug,eth,web3,personal,ethash,miner' --ws.origins '*' --allow-insecure-unlock console 2> /dev/null"
       else
-        command="geth --dev --datadir ./geth-home/data --networkid 30888 --syncmode=light --http --http.vhosts='*' --http.addr '0.0.0.0' --http.port 30888 --http.api 'admin,debug,eth,web3,personal,ethash,miner' --http.corsdomain '*' --ws --ws.addr '0.0.0.0' --ws.port 30999 --ws.api 'admin,debug,eth,web3,personal,ethash,miner' --ws.origins '*' --allow-insecure-unlock console 2> /dev/null"
+        command="geth --dev --datadir ./geth-home/data --networkid 30888 --http --http.vhosts='*' --http.addr '0.0.0.0' --http.port 30888 --http.api 'admin,debug,eth,web3,personal,ethash,miner' --http.corsdomain '*' --ws --ws.addr '0.0.0.0' --ws.port 30999 --ws.api 'admin,debug,eth,web3,personal,ethash,miner' --ws.origins '*' --allow-insecure-unlock console 2> /dev/null"
       fi
       ;;
     4)
